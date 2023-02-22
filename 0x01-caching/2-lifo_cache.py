@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-#LIFO caching
+'''LIFO caching'''
 
 from base_caching import BaseCaching
 
 
 class LIFOCache(BaseCaching):
     '''
-        define LIFO caching class
+    define LIFO caching class
 
-        Args:
-            BaseCaching (_type): parent cache class
+    Args:
+        BaseCaching (_type): parent cache class
     '''
 
     def __init__(self):
@@ -17,11 +17,11 @@ class LIFOCache(BaseCaching):
 
     def put(self, key, item):
         '''
-            stores cahced data using LIFO policies
+        stores cahced data using LIFO policies
 
-            Args:
-                key (str): key
-                item (str): value of itme to be stored
+        Args:
+            key (str): key
+            item (str): value of itme to be stored
         '''
 
         if not key or not item:
@@ -50,12 +50,12 @@ class LIFOCache(BaseCaching):
 
         def get(self, key):
             '''
-                get value associated with key
+            get value associated with key
 
-                Args:
-                    key (_type): cache_data key
+            Args:
+                key (_type): cache_data key
 
-                Returns:
-                    _type_: None if unsuccessful else data at key
+            Returns:
+                _type_: None if unsuccessful else data at key
             '''
             return self.cache_data.get(key)

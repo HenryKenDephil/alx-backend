@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-#FIFO  caching
+'''FIFO  caching'''
 from functools import cache
 
 from base_caching import BaseCaching
 
 class FIFOCache(BaseCaching):
     '''
-        defining classs for FIFO caching
+    defining classs for FIFO caching
 
-        Args:
-            BaseCaching (class): parent class
+    Args:
+        BaseCaching (class): parent class
     '''
 
     def __init__(self):
@@ -17,10 +17,10 @@ class FIFOCache(BaseCaching):
 
     def put(self, key, item):
         '''
-             a function to add  data to the cache
-             Args:
-                key(_type): key
-                item(_type): value
+        a function to add  data to the cache
+        Args:
+        key(_type): key
+        item(_type): value
         '''
 
         if key and item:
@@ -33,12 +33,12 @@ class FIFOCache(BaseCaching):
 
         def get(self, key):
             '''
-                get value linked to a specific key
-                Args:
-                    key(_type): cache_data key
+            get value linked to a specific key
+            Args:
+                key(_type): cache_data key
 
-                Returns: 
-                    _type: None if  unsuccessful else data at key
+            Returns: 
+                _type: None if  unsuccessful else data at key
             '''
 
             return self.cache_data.get(key)
