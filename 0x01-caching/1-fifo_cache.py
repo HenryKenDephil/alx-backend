@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 '''FIFO  caching'''
-from functools import cache
 
 from base_caching import BaseCaching
+
 
 class FIFOCache(BaseCaching):
     '''
@@ -40,5 +40,4 @@ class FIFOCache(BaseCaching):
             Returns: 
                 _type: None if  unsuccessful else data at key
             '''
-
             return self.cache_data.get(key)
